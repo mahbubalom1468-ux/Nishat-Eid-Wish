@@ -501,7 +501,14 @@ z-index: 5;
 
 <div id="finalFull">
 <div class="moon"></div>
-<h1 class="finalText"><br> Eid-ul-Adha Greetings to You 🕌</h1>
+<h1 class="finalText">
+<br>
+Eid-ul-Adha Greetings to You 🕌
+<br><br>
+Eid Mubarak 🌙
+<br>
+Miss Police 💖
+</h1>
 
 <div id="salamiDisplay" class="salami-box">
   <div id="salamiText" class="salami-text-content"></div>
@@ -725,7 +732,11 @@ function start(){
     let randomShayari =
     shayaris[Math.floor(Math.random() * shayaris.length)];
 
-    typeText(msg1, randomShayari, 'btn1');
+    typeText(
+document.getElementById("msg1"),
+randomShayari,
+'btn1'
+);
 }
 
 /* NEXT */
@@ -742,16 +753,18 @@ function next(step){
 
     if(step===2){
 
-        typeText(
+typeText(
 
-            msg2,
+document.getElementById("msg2"),
 
-            `On this holy day, may Allah accept all your sacrifices and prayers and fill your life with happiness. Eid Mubarak 🌙💫`,
+`On this holy day, may Allah accept all your sacrifices and prayers and fill your life with happiness. Stay happy always, Miss Police 💖  
+Eid Mubarak 🌙💫`,
 
-            'btn2'
+'btn2'
 
-        );
-    }
+);
+
+}
 }
 
 /* HUG */
@@ -839,7 +852,7 @@ function nextFinal(){
 
         /* FIXED SALAMI */
 
-        const receivedSalami = 1000;
+       const receivedSalami = 1000;
 
         document.getElementById("salamiText")
         .innerHTML =
